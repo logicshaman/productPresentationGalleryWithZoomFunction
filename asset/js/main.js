@@ -451,9 +451,6 @@ function prdctPrsnttonGlry_E(){
 		}
 	}
 	onModalStagedE.getElementsByClassName("backButton")[0].addEventListener("click",function(){PreviousImg();});
-	// $(document).keyup(function(e) {if (e.key === "Escape") {modalCloser_450386kdi()}});
-	// $(document).keyup(function(e) {if (e.keyCode == '37') {PreviousImg()}});
-	// $(document).keyup(function(e) {if (e.keyCode == '39') {NextImg()}});
 
 	document.body.addEventListener('keyup', function(e) {
 		if (e.key === "Escape") {modalCloser_450386kdi()}
