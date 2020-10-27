@@ -289,7 +289,7 @@ function prdctPrsnttonGlry_E(){
 			]);
 			onModalStagedImg_jQ.find(">div").RcssW([
 				["height",[
-					[280,maxHeightModalStagedImage,{minRange:650}]
+					[280,maxHeightModalStagedImage,{minRange:500}]
 				]]
 			]);
 
@@ -308,11 +308,6 @@ function prdctPrsnttonGlry_E(){
 				["padding-bottom",[[4,9,{minRange:650}]]]
 			]);
 
-			// onModalStagedImg_jQ.find(">div").RcssW([
-			// 	["height",[
-			// 		[220,maxHeightModalStagedImage]
-			// 	]]
-			// ]);
 			onModalStagedImg_jQ.find(".btns").RcssW([
 				["width",[[50,100]]]
 			]);
@@ -427,8 +422,8 @@ function prdctPrsnttonGlry_E(){
 		zoomResult_jQ.find("div").removeClass("active");
 	}
 	// next img
-	onModalStagedE.getElementsByClassName("nextButton")[0].addEventListener("click",function(){
-		FALD_ValueRetainer=parseInt(firstAndLastDeterminant());
+	function NextImg() {
+	 	FALD_ValueRetainer=parseInt(firstAndLastDeterminant());
 		RemoveToReplaceImg();
 		if (FALD_ValueRetainer!==numsOfThumbs){
 			e_actualSize_jQ.find(".otimumImg_div_"+(FALD_ValueRetainer+1)+"").addClass("active");
@@ -439,9 +434,10 @@ function prdctPrsnttonGlry_E(){
 			e_thumbs_jQ.find(".thumbImg_div_1").addClass("active");
 			zoomResult_jQ.find(".zResult1").addClass("active");
 		}
-	});
+	}
+	onModalStagedE.getElementsByClassName("nextButton")[0].addEventListener("click",function(){PreviousImg()});
 	// previous img
-	onModalStagedE.getElementsByClassName("backButton")[0].addEventListener("click",function(){
+	function PreviousImg(){
 		FALD_ValueRetainer=parseInt(firstAndLastDeterminant());
 		RemoveToReplaceImg();
 		if(FALD_ValueRetainer!==1){
@@ -453,7 +449,19 @@ function prdctPrsnttonGlry_E(){
 			e_thumbs_jQ.find(".thumbImg_div_"+numsOfThumbsToString+"").addClass("active");
 			zoomResult_jQ.find(".zResult"+numsOfThumbsToString+"").addClass("active");
 		}
+	}
+	onModalStagedE.getElementsByClassName("backButton")[0].addEventListener("click",function(){PreviousImg();});
+	// $(document).keyup(function(e) {if (e.key === "Escape") {modalCloser_450386kdi()}});
+	// $(document).keyup(function(e) {if (e.keyCode == '37') {PreviousImg()}});
+	// $(document).keyup(function(e) {if (e.keyCode == '39') {NextImg()}});
+
+	document.body.addEventListener('keyup', function(e) {
+		if (e.key === "Escape") {modalCloser_450386kdi()}
+		if (e.keyCode == '37') {PreviousImg()}
+		if (e.keyCode == '39') {NextImg()}
 	});
+
+
 
 	
 }prdctPrsnttonGlry_E();
