@@ -435,7 +435,7 @@ function prdctPrsnttonGlry_E(){
 			zoomResult_jQ.find(".zResult1").addClass("active");
 		}
 	}
-	onModalStagedE.getElementsByClassName("nextButton")[0].addEventListener("click",function(){PreviousImg()});
+	onModalStagedE.getElementsByClassName("nextButton")[0].addEventListener("click",function(){NextImg()});
 	// previous img
 	function PreviousImg(){
 		FALD_ValueRetainer=parseInt(firstAndLastDeterminant());
