@@ -458,7 +458,4 @@ function prdctPrsnttonGlry_E(){
 		if (e.keyCode == '39') {NextImg()}
 	});
 
-
-
-	
 }prdctPrsnttonGlry_E();
