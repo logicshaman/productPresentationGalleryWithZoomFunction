@@ -1,2 +1,2 @@
 # productPresentationGalleryWithZoomFunction
-a https://logicshaman.github.io/productPresentationGalleryWithZoomFunction/
+https://logicshaman.github.io/productPresentationGalleryWithZoomFunction/
